@@ -1,0 +1,185 @@
+﻿
+@{
+    ViewBag.Title = "Farmaci";
+    Layout = "../Shared/_LayoutReserved.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-8">
+        <h2>Farmaci</h2>
+        @*<ol class="breadcrumb">
+                <li>
+                    <a href="@Url.Action("Dashboard_1", "Dashboards")">Home</a>
+                </li>
+                <li>
+                    Extra pages
+                </li>
+                <li class="active">
+                    <strong>Calendar</strong>
+                </li>
+            </ol>*@
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInDown">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Farmaci </h5>
+                    @*<div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="#">Config option 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>*@
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        La somministrazione sperimentale della farmaco psicotropo dislettico (psicodislettica: capace di alterare la percezione, lo stato di coscienza o il comportamento) è già al 5° ciclo. Sono stati fatti diversi progressi relativamente alla stabilizzazione del processo ma sono stati riscontrati conflitti con sostanze psicoanalettica: eccitatoria dell'attività mentale (es. anfetamine, caffeina, cocaina) quindi è imperativo evitarne la somministrazione se non in casi estremi.
+                    </p>
+
+                    <p>
+                        Il farmaco X798 supportato dallo stabilizzante stabilizzante U591 e dall attuatore Z675 predispone il soggetto all’indottrinamento comportamentale ipnotico manipolando il suo inconscio e subconscio lasciando inalterata la percezione del se.
+                    </p>
+                    Alcuni soggetti si dimostrano particolarmente resistenti al farmaco,  le motivazioni sono ancora sconosciute, escluso il fattore fisiologico genetico, possiamo ipotizzare che una forte attività psicoanalettica specificatamente durante il sonno  o la veglia possa (adrenalina generata per colpa di incubi o forti allucinazioni) abbiano potuto concorrere all’inibizione dell’effetto generale. Con la nuova versione del farmaco ciò è impossibile poichè abbiamo inserito delle sostanze depressive che inibiscono influenza di sostanze psicoanalettiche generate dall’organismo.
+                    <p>
+                        I soggetti fin’ ora reimmessi nella procedura sono stati sottoposti a soppressione dell’attività dell’ippocampo con procedura sperimentale per rimuovere i ricordi del vissuto nel breve lasso di tempo. La procedura però causa anche la perdita generale di identità, ma con l’idottrinemnto transipnotico e possibile colmare quei vuoiti con nuove informazioni. Questo varia inevitabilmente la narrazione personale del vissuto del soggetto ma il cervello umano ha la meravigliosa dote di amalgamare l’errore e ridare autonomamente coerenza al tutto. Questo avviene perchè il nostro cervello umano non è in grado di accettare in prima battuta ciò che sfugge alla sua logica e per configurazione di base cerca di dare un senso a tutto anche inventando ricordi falsi per compensazione.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    @Styles.Render("~/plugins/fullCalendarStyles")
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/plugins/fullCalendar")
+    @Scripts.Render("~/plugins/iCheck")
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$('.fc-month-button').removeClass('fc-state-active')
+            //$('.fc-agendaDay-button').addClass('fc-state-active');
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+            /* initialize the external events
+             -----------------------------------------------------------------*/
+
+
+            $('#external-events div.external-event').each(function () {
+
+                // store data so the calendar knows to render an event upon drop
+                $(this).data('event', {
+                    title: $.trim($(this).text()), // use the element's text as the event title
+                    stick: true // maintain when user navigates (see docs on the renderEvent method)
+                });
+
+                // make the event draggable using jQuery UI
+                $(this).draggable({
+                    zIndex: 1111999,
+                    revert: true,      // will cause the event to go back to its
+                    revertDuration: 0  //  original position after the drag
+                });
+
+            });
+
+
+            /* initialize the calendar
+             -----------------------------------------------------------------*/
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                editable: true,
+                droppable: true, // this allows things to be dropped onto the calendar
+                drop: function () {
+                    // is the "remove after drop" checkbox checked?
+                    if ($('#drop-remove').is(':checked')) {
+                        // if so, remove the element from the "Draggable Events" list
+                        $(this).remove();
+                    }
+                },
+                events: [
+                    {
+                        title: 'All Day Event',
+                        start: new Date(y, m, 1)
+                    },
+                    {
+                        title: 'Long Event',
+                        start: new Date(y, m, d - 5),
+                        end: new Date(y, m, d - 2),
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d - 3, 16, 0),
+                        allDay: false,
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d + 4, 16, 0),
+                        allDay: false
+                    },
+                    {
+                        title: 'Meeting',
+                        start: new Date(y, m, d, 10, 30),
+                        allDay: false
+                    },
+                    {
+                        title: 'Lunch',
+                        start: new Date(y, m, d, 12, 0),
+                        end: new Date(y, m, d, 14, 0),
+                        allDay: false
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: new Date(y, m, d + 1, 19, 0),
+                        end: new Date(y, m, d + 1, 22, 30),
+                        allDay: false
+                    },
+                    {
+                        title: 'Click for Google',
+                        start: new Date(y, m, 28),
+                        end: new Date(y, m, 29),
+                        url: 'http://google.com/'
+                    }
+                ],
+            });
+
+
+        });
+    </script>
+}
+

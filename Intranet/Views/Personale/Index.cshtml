@@ -1,0 +1,68 @@
+﻿@model List<Intranet.Models.Personale>
+@{
+    ViewBag.Title = "Personale";
+    Layout = "../Shared/_LayoutReserved.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Cartelle Cliniche</h2>
+        @*<ol class="breadcrumb">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a>UI Elements</a>
+                </li>
+                <li class="active">
+                    <strong>Tabs</strong>
+                </li>
+            </ol>*@
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeIn">
+
+    <div class="row m-t-lg">
+        <div class="col-lg-12">
+            <div class="tabs-container">
+                <div class="tabs-left">
+                    <ul class="nav nav-tabs">
+                        @foreach (var item in Model)
+                        {
+                            <li class="">
+                                <a data-toggle="tab" href="#@item.href">
+                                    @item.NomeAddetto
+                                    @if (item.NomeAddetto == "Paziente Tre")
+                                    {
+                                        <span class="label label-danger">!</span>
+                                    }
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                    <div class="tab-content ">
+                        @foreach (var item in Model)
+                        {
+                            <div id="@item.href" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>
+                                        @item.Descrizione
+                                    </p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

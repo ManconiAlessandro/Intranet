@@ -1,0 +1,209 @@
+﻿
+@{
+    ViewBag.Title = "Farmaci";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-8">
+        <h2>Farmaci</h2>
+        @*<ol class="breadcrumb">
+                <li>
+                    <a href="@Url.Action("Dashboard_1", "Dashboards")">Home</a>
+                </li>
+                <li>
+                    Extra pages
+                </li>
+                <li class="active">
+                    <strong>Calendar</strong>
+                </li>
+            </ol>*@
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInDown">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Schedulazione </h5>
+                    <div class="pull-right">
+                        <button></button>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Styles {
+    @Styles.Render("~/plugins/fullCalendarStyles")
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/plugins/fullCalendar")
+    @Scripts.Render("~/plugins/iCheck")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+            /* initialize the external events
+             -----------------------------------------------------------------*/
+
+            $('#external-events div.external-event').each(function () {
+
+                // store data so the calendar knows to render an event upon drop
+                $(this).data('event', {
+                    title: $.trim($(this).text()), // use the element's text as the event title
+                    stick: true // maintain when user navigates (see docs on the renderEvent method)
+                });
+
+                // make the event draggable using jQuery UI
+                $(this).draggable({
+                    zIndex: 1111999,
+                    revert: true,      // will cause the event to go back to its
+                    revertDuration: 0  //  original position after the drag
+                });
+
+            });
+
+
+            /* initialize the calendar
+             -----------------------------------------------------------------*/
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
+
+            $('#calendar').fullCalendar({
+                timeFormat: 'HH:mm', // uppercase H for 24-hour clock
+                firstDay: 1, //Monday
+                timezone: 'local',
+                allDaySlot: false, //non mostra lo slot all-days
+                allDayText: 'all days',
+                slotLabelFormat: 'HH:mm',
+                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'],
+                monthNamesShort: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'],
+                columnFormat: 'ddd DD',
+                minTime: '08:00:00',
+                maxTime: '20:00:00',
+                eventClick: function (calEvent, jsEvent, view) {
+
+                    //alert('Event: ' + calEvent.title);
+                    //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+                    //alert('View: ' + view.name);
+
+                    
+                    //fare il popover dismissable e dinamico con ajax che pesca dal db DIO PORCO
+
+                    $(this).popover({
+                        html: true,
+                        placement: 'bottom',
+                        container: 'body',
+                        title: function () {
+                            return calEvent.title
+                        },
+                        content: function () {
+                            var cont = '';
+                            cont += 'Somministrazione in fase di accettazione tramite iniettore predosato.<br/>';
+                            cont += 'Una dose di  X798 a soggetto.<br/>';
+                            cont += 'Note: ATTENZIONE, tutti i soggetti devono ricevere la somministrazione entro le 11.30 del mattino';
+                            return cont;
+                        }
+                    });
+
+                    $(this).popover('show');
+
+                    
+
+                    // change the border color just for fun
+                    //$(this).css('border-color', 'red');
+                },
+                buttonText:
+                {
+                    today: 'Oggi',
+                    month: 'Mese',
+                    week: 'Settimana',
+                    day: 'Giorno',
+                    list: 'Lista'
+                },
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                editable: true,
+                droppable: true, // this allows things to be dropped onto the calendar
+                drop: function () {
+                    // is the "remove after drop" checkbox checked?
+                    if ($('#drop-remove').is(':checked')) {
+                        // if so, remove the element from the "Draggable Events" list
+                        $(this).remove();
+                    }
+                },
+                events: [
+                    {
+                        title: 'X798',
+                        start: new Date(y, m, d, 9, 0),
+                        end: new Date(y, m, d, 11, 0),
+                        allDay: false
+                    },
+                    {
+                        title: 'U591',
+                        start: new Date(y, m, d, 13, 0),
+                        end: new Date(y, m, d, 14, 0),
+                        allDay: false
+                    },
+                    {
+                        title: 'Z675',
+                        start: new Date(y, m, d, 17, 0),
+                        end: new Date(y, m, d, 18, 0),
+                        allDay: false
+                    },
+                    //{
+                    //    title: 'Long Event',
+                    //    start: new Date(y, m, d - 5),
+                    //    end: new Date(y, m, d - 2),
+                    //},
+                    //{
+                    //    id: 999,
+                    //    title: 'Repeating Event',
+                    //    start: new Date(y, m, d - 3, 16, 0),
+                    //    allDay: false,
+                    //},
+                    //{
+                    //    id: 999,
+                    //    title: 'Repeating Event',
+                    //    start: new Date(y, m, d + 4, 16, 0),
+                    //    allDay: false
+                    //},
+                    //{
+                    //    title: 'Birthday Party',
+                    //    start: new Date(y, m, d + 1, 19, 0),
+                    //    end: new Date(y, m, d + 1, 22, 30),
+                    //    allDay: false
+                    //},
+                    //{
+                    //    title: 'Click for Google',
+                    //    start: new Date(y, m, 28),
+                    //    end: new Date(y, m, 29),
+                    //    url: 'http://google.com/'
+                    //}
+                ],
+            });
+
+            $('.fc-agendaWeek-button').click();
+            //$('.fc-month-button').removeClass('fc-state-active');
+        });
+    </script>
+}
+
