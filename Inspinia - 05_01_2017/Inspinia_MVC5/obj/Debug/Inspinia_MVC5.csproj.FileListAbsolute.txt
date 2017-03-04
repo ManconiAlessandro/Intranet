@@ -30,3 +30,35 @@ C:\Users\Niccolò\Dropbox\Projects\Singularis Sera\Live 2017\Intranet\Inspinia -
 C:\Users\Niccolò\Dropbox\Projects\Singularis Sera\Live 2017\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.csprojResolveAssemblyReference.cache
 C:\Users\Niccolò\Dropbox\Projects\Singularis Sera\Live 2017\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.dll
 C:\Users\Niccolò\Dropbox\Projects\Singularis Sera\Live 2017\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.pdb
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\Inspinia_MVC5.dll.config
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\Inspinia_MVC5.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\Inspinia_MVC5.pdb
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\Antlr3.Runtime.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\EntityFramework.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\EntityFramework.SqlServer.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\Microsoft.Web.Infrastructure.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\Newtonsoft.Json.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.Helpers.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.Mvc.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.Optimization.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.Razor.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.WebPages.Deployment.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.WebPages.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.WebPages.Razor.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\WebGrease.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\Antlr3.Runtime.pdb
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\EntityFramework.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\EntityFramework.SqlServer.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\Newtonsoft.Json.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.Helpers.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.Mvc.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.Optimization.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.Razor.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.WebPages.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.WebPages.Deployment.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\System.Web.WebPages.Razor.xml
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\pl\System.Web.Optimization.resources.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\bin\pl\System.Web.Razor.resources.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.csprojResolveAssemblyReference.cache
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.dll
+D:\SingularisSera\Progetti\Intranet\Inspinia - 05_01_2017\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.pdb
