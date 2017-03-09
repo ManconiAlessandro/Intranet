@@ -44,7 +44,7 @@ namespace Intranet.Models
             return new ApplicationDbContext();
         }
 
-        public DbSet<ScopoProgetto> ScopoProgetto { get; set; }
+        public DbSet<Progetto> Progetto { get; set; }
         public DbSet<CartelleCliniche> CartelleCliniche { get; set; }
         public DbSet<Personale> Personale { get; set; }
     }

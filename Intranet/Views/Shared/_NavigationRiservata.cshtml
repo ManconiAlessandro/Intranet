@@ -38,12 +38,6 @@
             <li class="@Html.IsSelected(controller: "Centralina")">
                 <a href="@Url.Action("Index", "Centralina")"><i class="fa fa-database"></i> <span class="nav-label" data-i18n="nav.layouts">Centralina Satellitare</span></a>
             </li>
-            <li class="@Html.IsSelected(controller: "CartelleCliniche")">
-                <a href="@Url.Action("SpecialIndex", "CartelleCliniche")"><i class="fa fa-user-plus"></i> <span class="nav-label" data-i18n="nav.layouts">Pazienti Speciali</span></a>
-            </li>
-            <li class="@Html.IsSelected(controller: "Procedura")">
-                <a href="@Url.Action("Index", "Procedura")"><i class="fa fa-file-text-o"></i> <span class="nav-label" data-i18n="nav.layouts">Procedura</span></a>
-            </li>
             <li class="@Html.IsSelected(controller: "Mailbox")">
                 <a href="#"><i class="fa fa-envelope"></i> <span class="nav-label" data-i18n="nav.mailbox">Casella Mail </span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Mailbox", cssClass: "in")">
@@ -51,9 +45,15 @@
                     <li class="@Html.IsSelected(action: "EmailView")"><a href="@Url.Action("EmailView", "Mailbox")">Email view</a></li>
                 </ul>
             </li>
-            <li class="@Html.IsSelected(controller: "ScopoProgetto")">
-                <a href="@Url.Action("Index", "ScopoProgetto")"><i class="fa fa-empire"></i> <span class="nav-label" data-i18n="nav.layouts">Scopo Progetto</span></a>
+            <li class="@Html.IsSelected(controller: "Progetto")">
+                <a href="#"><i class="fa fa-empire"></i> <span class="nav-label" data-i18n="nav.mailbox">Progetto </span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Progetto", cssClass: "in")">
+                    <li class="@Html.IsSelected(action: "Requisiti")"><a href="@Url.Action("Requisiti", "Progetto")">Requisiti</a></li>
+                    <li class="@Html.IsSelected(action: "Procedura")"><a href="@Url.Action("Procedura", "Progetto")">Procedura</a></li>
+                    <li class="@Html.IsSelected(action: "Finalita")"><a href="@Url.Action("Finalita", "Progetto")">Finalità</a></li>
+                </ul>
             </li>
+            
             <li class="">
                 <a href="@Url.Action("Index", "AreaRiservata")"><i class="fa fa-sign-out"></i> <span class="nav-label" data-i18n="nav.layouts">Logout</span></a>
             </li>

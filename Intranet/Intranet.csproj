@@ -170,12 +170,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AreaRiservataController.cs" />
+    <Compile Include="Controllers\BeeperController.cs" />
+    <Compile Include="Controllers\CartelleClinicheController.cs" />
     <Compile Include="Controllers\CentralinaController.cs" />
     <Compile Include="Controllers\ProceduraEmergenzaController.cs" />
     <Compile Include="Controllers\ProceduraController.cs" />
-    <Compile Include="Controllers\ScopoProgettoController.cs" />
+    <Compile Include="Controllers\ProgettoController.cs" />
     <Compile Include="Controllers\PersonaleController.cs" />
-    <Compile Include="Controllers\CartelleClinicheController.cs" />
     <Compile Include="Controllers\TerapieController.cs" />
     <Compile Include="Controllers\TurniController.cs" />
     <Compile Include="Controllers\FarmaciController.cs" />
@@ -236,11 +237,27 @@
     <Compile Include="Migrations\201701251624140_personalee.Designer.cs">
       <DependentUpon>201701251624140_personalee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703092004305_CartelleClinicheUpdate.cs" />
+    <Compile Include="Migrations\201703092004305_CartelleClinicheUpdate.Designer.cs">
+      <DependentUpon>201703092004305_CartelleClinicheUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703092015064_CartelleClinicheUpdateV2.cs" />
+    <Compile Include="Migrations\201703092015064_CartelleClinicheUpdateV2.Designer.cs">
+      <DependentUpon>201703092015064_CartelleClinicheUpdateV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703092045172_CartelleClinicheUpdateV21.cs" />
+    <Compile Include="Migrations\201703092045172_CartelleClinicheUpdateV21.Designer.cs">
+      <DependentUpon>201703092045172_CartelleClinicheUpdateV21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703092159215_asd.cs" />
+    <Compile Include="Migrations\201703092159215_asd.Designer.cs">
+      <DependentUpon>201703092159215_asd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ScopoProgettoViewModels.cs" />
     <Compile Include="Models\Tabelle\Personale.cs" />
     <Compile Include="Models\Tabelle\CartelleCliniche.cs" />
-    <Compile Include="Models\Tabelle\ScopoProgetto.cs" />
+    <Compile Include="Models\Tabelle\Progetto.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -413,6 +430,7 @@
     <Content Include="Images\email_1.jpg" />
     <Content Include="Images\email_2.jpg" />
     <Content Include="Images\email_3.jpg" />
+    <Content Include="Images\FotoKoller.jpeg" />
     <Content Include="Images\flags\16\Abkhazia.png" />
     <Content Include="Images\flags\16\Afghanistan.png" />
     <Content Include="Images\flags\16\Aland.png" />
@@ -1909,10 +1927,12 @@
     <Content Include="Views\Personale\Index.cshtml" />
     <Content Include="Views\ProceduraEmergenza\Index.cshtml" />
     <Content Include="Views\Procedura\Index.cshtml" />
-    <Content Include="Views\ScopoProgetto\Index.cshtml" />
+    <Content Include="Views\Progetto\Finalita.cshtml" />
     <Content Include="Views\CartelleCliniche\SpecialIndex.cshtml" />
     <Content Include="Views\Centralina\Index.cshtml" />
     <Content Include="Views\CartelleCliniche\Index.cshtml" />
+    <Content Include="Views\CartelleCliniche\Create.cshtml" />
+    <Content Include="Views\Beeper\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1948,6 +1968,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701251624140_personalee.resx">
       <DependentUpon>201701251624140_personalee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703092004305_CartelleClinicheUpdate.resx">
+      <DependentUpon>201703092004305_CartelleClinicheUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703092015064_CartelleClinicheUpdateV2.resx">
+      <DependentUpon>201703092015064_CartelleClinicheUpdateV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703092045172_CartelleClinicheUpdateV21.resx">
+      <DependentUpon>201703092045172_CartelleClinicheUpdateV21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703092159215_asd.resx">
+      <DependentUpon>201703092159215_asd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -38,6 +38,9 @@
             <li class="@Html.IsSelected(controller: "Terapie")">
                 <a href="@Url.Action("Index", "Terapie")"><i class="fa fa-clock-o"></i> <span class="nav-label" data-i18n="nav.layouts">Terapie</span></a>
             </li>
+            <li class="@Html.IsSelected(controller: "Beeper")">
+                <a href="@Url.Action("Index", "Beeper")"><i class="fa fa-volume-up"></i> <span class="nav-label" data-i18n="nav.layouts">Beeper</span></a>
+            </li>
             <li class="@Html.IsSelected(controller: "AreaRiservata")">
                 <a href="@Url.Action("Index", "AreaRiservata")"><i class="fa fa-lock"></i> <span class="nav-label" data-i18n="nav.layouts">Area Riservata</span></a>
             </li>

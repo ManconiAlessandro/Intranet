@@ -19,10 +19,7 @@
             </ol>*@
     </div>
     <div class="col-lg-2">
-        <br/> <br/> 
-        <div class="ibox-tools">
-            <a href="@Url.Action("Create", "CartelleCliniche")" class="btn btn-primary btn-sm pull-right"><i class=""></i> Aggiungi</a>
-        </div>
+
     </div>
 </div>
 <div class="wrapper wrapper-content animated fadeIn">
@@ -31,7 +28,9 @@
         <div class="col-lg-12">
             <div class="tabs-container">
                 <div class="tabs-left">
-                    
+                    <div class="ibox-tools">
+                        <a href="@Url.Action("Aggiungi", "Create")" class="btn btn-primary btn-sm pull-right"><i class=""></i> Aggiungi</a>
+                    </div>
                     <ul class="nav nav-tabs">
                         @foreach (var item in Model)
                         {
@@ -52,9 +51,9 @@
                             <div id="@item.href" class="tab-pane">
                                 <div class="panel-body">
                                     <strong>@item.NomeCompleto</strong>
-                                         
+
                                     <p>
-                                        @*@item.Descrizione*@
+                                        @item.Descrizione
                                     </p>
                                 </div>
                             </div>

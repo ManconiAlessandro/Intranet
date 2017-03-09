@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Intranet.Models
 {
-    public class ScopoProgetto
+    public class Progetto
     {
         [Key]
         public Guid IDScopoProgetto { get; set; }

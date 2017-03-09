@@ -8,16 +8,16 @@ using System.Web.Mvc;
 
 namespace Intranet.Controllers
 {
-    public class ScopoProgettoController : Controller
+    public class ProgettoController : Controller
     {
 
-        public ActionResult Index()
+        public ActionResult Finalita()
         {
             int min = DateTime.Now.Minute;
 
             using (var db = new ApplicationDbContext())
             {
-                var _r = db.ScopoProgetto.Where(m => m.RangeOrario >= min).OrderBy(r => r.RangeOrario).First();
+                var _r = db.Progetto.Where(m => m.RangeOrario >= min).OrderBy(r => r.RangeOrario).First();
 
                 ScopoProgettoViewModels result = new ScopoProgettoViewModels
                 {
