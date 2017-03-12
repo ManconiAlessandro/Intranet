@@ -201,6 +201,7 @@
     <Compile Include="Controllers\TablesController.cs" />
     <Compile Include="Controllers\UIElementsController.cs" />
     <Compile Include="Controllers\WidgetsController.cs" />
+    <Compile Include="Enums\HtmlLists.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -252,6 +253,10 @@
     <Compile Include="Migrations\201703092159215_asd.cs" />
     <Compile Include="Migrations\201703092159215_asd.Designer.cs">
       <DependentUpon>201703092159215_asd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703122202454_AggiunteAllergieDesc.cs" />
+    <Compile Include="Migrations\201703122202454_AggiunteAllergieDesc.Designer.cs">
+      <DependentUpon>201703122202454_AggiunteAllergieDesc.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ScopoProgettoViewModels.cs" />
@@ -1933,6 +1938,11 @@
     <Content Include="Views\CartelleCliniche\Index.cshtml" />
     <Content Include="Views\CartelleCliniche\Create.cshtml" />
     <Content Include="Views\Beeper\Index.cshtml" />
+    <Content Include="Views\CartelleCliniches\Create.cshtml" />
+    <Content Include="Views\CartelleCliniches\Delete.cshtml" />
+    <Content Include="Views\CartelleCliniches\Details.cshtml" />
+    <Content Include="Views\CartelleCliniches\Edit.cshtml" />
+    <Content Include="Views\CartelleCliniches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1980,6 +1990,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703092159215_asd.resx">
       <DependentUpon>201703092159215_asd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703122202454_AggiunteAllergieDesc.resx">
+      <DependentUpon>201703122202454_AggiunteAllergieDesc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -43,6 +43,7 @@ namespace Intranet.Models
         [DisplayName("Tipo Di Allattamento")]
         public String TipoDiAllattamento { get; set; }
         public String Allergie { get; set; }
+        public String AllergieDescrizione { get; set; }
         public String Convulsioni { get; set; }
         public String Vertigini { get; set; }
         public String Insonnia { get; set; }

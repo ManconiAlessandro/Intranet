@@ -51,11 +51,12 @@ namespace Intranet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IDCartellaClinica,Nome,Cognome,NumeroCartellaClinica,href,LuogoDiNascita,DataDiNascita,Eta,Sesso,CodiceFiscale,StatoCivile,NomeDelConiuge,ProfessioneAttuale,Residenza,Telefono,InvitatoDa,Peso,Altezza,TipoDiNascita,ManoDominante,TipoDiAllattamento,Allergie,Convulsioni,Vertigini,Insonnia,NevrosismoDepressione,VomitoNeurologico,FamiliariPatologieFisiche,FamiliariPatologiePsicologiche,FamiliariPatologiePsichiatriche,PatologieFisicheGravi,PatologiePsicologiche,PatologiePsichiatriche,TendenzaAllaViolenza,LivelloConformita")] CartelleCliniche cartelleCliniche)
+        public ActionResult Create([Bind(Include = "IDCartellaClinica,NumeroCartellaClinica,Nome,Cognome,href,LuogoDiNascita,DataDiNascita,Eta,Sesso,CodiceFiscale,StatoCivile,NomeDelConiuge,ProfessioneAttuale,Residenza,Telefono,InvitatoDa,Peso,Altezza,TipoDiNascita,ManoDominante,TipoDiAllattamento,Allergie,AllergieDescrizione,Convulsioni,Vertigini,Insonnia,NevrosismoDepressione,VomitoNeurologico,FamiliariPatologieFisiche,FamiliariPatologiePsicologiche,FamiliariPatologiePsichiatriche,PatologieFisicheGravi,PatologiePsicologiche,PatologiePsichiatriche,TendenzaAllaViolenza,LivelloConformita")] CartelleCliniche cartelleCliniche)
         {
             if (ModelState.IsValid)
             {
                 cartelleCliniche.IDCartellaClinica = Guid.NewGuid();
+                cartelleCliniche.href = $"tab-{cartelleCliniche.NumeroCartellaClinica}";
                 db.CartelleCliniche.Add(cartelleCliniche);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -84,7 +85,7 @@ namespace Intranet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDCartellaClinica,Nome,Cognome,NumeroCartellaClinica,href,LuogoDiNascita,DataDiNascita,Eta,Sesso,CodiceFiscale,StatoCivile,NomeDelConiuge,ProfessioneAttuale,Residenza,Telefono,InvitatoDa,Peso,Altezza,TipoDiNascita,ManoDominante,TipoDiAllattamento,Allergie,Convulsioni,Vertigini,Insonnia,NevrosismoDepressione,VomitoNeurologico,FamiliariPatologieFisiche,FamiliariPatologiePsicologiche,FamiliariPatologiePsichiatriche,PatologieFisicheGravi,PatologiePsicologiche,PatologiePsichiatriche,TendenzaAllaViolenza,LivelloConformita")] CartelleCliniche cartelleCliniche)
+        public ActionResult Edit([Bind(Include = "IDCartellaClinica,NumeroCartellaClinica,Nome,Cognome,href,LuogoDiNascita,DataDiNascita,Eta,Sesso,CodiceFiscale,StatoCivile,NomeDelConiuge,ProfessioneAttuale,Residenza,Telefono,InvitatoDa,Peso,Altezza,TipoDiNascita,ManoDominante,TipoDiAllattamento,Allergie,AllergieDescrizione,Convulsioni,Vertigini,Insonnia,NevrosismoDepressione,VomitoNeurologico,FamiliariPatologieFisiche,FamiliariPatologiePsicologiche,FamiliariPatologiePsichiatriche,PatologieFisicheGravi,PatologiePsicologiche,PatologiePsichiatriche,TendenzaAllaViolenza,LivelloConformita")] CartelleCliniche cartelleCliniche)
         {
             if (ModelState.IsValid)
             {
