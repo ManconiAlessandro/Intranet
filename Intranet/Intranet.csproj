@@ -420,7 +420,6 @@
     <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Images\a1.jpg" />
     <Content Include="Images\a2.jpg" />
     <Content Include="Images\a3.jpg" />
@@ -1322,6 +1321,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Scripts\api\typehead_collection.json" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <None Include="Properties\PublishProfiles\gestionalekoller - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
@@ -1939,9 +1939,9 @@
     <Content Include="Views\CartelleCliniche\Create.cshtml" />
     <Content Include="Views\Beeper\Index.cshtml" />
     <Content Include="Views\CartelleCliniches\Create.cshtml" />
-    <Content Include="Views\CartelleCliniches\Delete.cshtml" />
+    <Content Include="Views\CartelleCliniche\Delete.cshtml" />
     <Content Include="Views\CartelleCliniches\Details.cshtml" />
-    <Content Include="Views\CartelleCliniches\Edit.cshtml" />
+    <Content Include="Views\CartelleCliniche\Edit.cshtml" />
     <Content Include="Views\CartelleCliniches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
