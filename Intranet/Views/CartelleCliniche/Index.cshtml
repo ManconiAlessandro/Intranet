@@ -54,12 +54,13 @@
                                         <a href="@Url.Action("Edit", "CartelleCliniche", new { id = item.IDCartellaClinica })" class="btn btn-warning btn-sm"><i class=""></i> Modifica </a>
                                         <a href="@Url.Action("Delete", "CartelleCliniche", new { id = item.IDCartellaClinica })" class="btn btn-danger btn-sm"><i class=""></i> Cancella </a>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-9" style="background-color:red">
                                         <p><strong>@item.NomeCompleto</strong></p>
                                         <p>N°: @item.NumeroCartellaClinica</p>
-                                        <div class="pull-left">Luogo di Nascita: @item.LuogoDiNascita </div>
-                                        <div class="pull-right">Data di Nascita: @item.DataDiNascita  </div>
-
+                                        <div class="">Luogo di Nascita: @item.LuogoDiNascita </div>
+                                        <div class="">Data di Nascita: @item.DataDiNascita  </div>
+                                        <div class="">Età: @item.Eta  </div>
+                                        <div class="">Sesso: @item.Sesso  </div>
                                     </div>
                                 </div>
                             </div>
