@@ -89,6 +89,7 @@ namespace Intranet.Controllers
         {
             if (ModelState.IsValid)
             {
+                cartelleCliniche.href = $"tab-{cartelleCliniche.NumeroCartellaClinica}";
                 db.Entry(cartelleCliniche).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
