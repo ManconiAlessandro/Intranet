@@ -24,6 +24,8 @@ namespace Intranet.Models
         public String Sesso { get; set; }
         [DisplayName("Codice Fiscale")]
         public String CodiceFiscale { get; set; }
+        [DisplayName("Cittadinanza")]
+        public String Cittadinanza { get; set; }
         [DisplayName("Stato Civile")]
         public String StatoCivile { get; set; }
         [DisplayName("Nome Del Coniuge")]
@@ -46,6 +48,7 @@ namespace Intranet.Models
         public String AllergieDescrizione { get; set; }
         public String Convulsioni { get; set; }
         public String Vertigini { get; set; }
+        public String Nevralgie { get; set; }
         public String Insonnia { get; set; }
         [DisplayName("Nevrosismo Depressione")]
         public String NevrosismoDepressione { get; set; }
@@ -63,6 +66,9 @@ namespace Intranet.Models
         public String PatologiePsicologiche { get; set; }
         [DisplayName("Patologie Psichiatriche (specificare patologia e cura)")]
         public String PatologiePsichiatriche { get; set; }
+        [DisplayName("Storia remota e recente")]
+        public String StoriaRemotaEPresente { get; set; }
+        public String Diagnosi { get; set; }
         [DisplayName("Tendenza Alla Violenza (Secondo Scala D639)")]
         public String TendenzaAllaViolenza { get; set; }
         [DisplayName("Livello Conformita (Secondo scala Ditter)")]

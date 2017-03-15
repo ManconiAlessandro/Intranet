@@ -274,6 +274,10 @@
     <Compile Include="Migrations\201703122202454_AggiunteAllergieDesc.Designer.cs">
       <DependentUpon>201703122202454_AggiunteAllergieDesc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703151905464_CorrettaCC.cs" />
+    <Compile Include="Migrations\201703151905464_CorrettaCC.Designer.cs">
+      <DependentUpon>201703151905464_CorrettaCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ScopoProgettoViewModels.cs" />
     <Compile Include="Models\Tabelle\Personale.cs" />
@@ -1954,11 +1958,8 @@
     <Content Include="Views\CartelleCliniche\Index.cshtml" />
     <Content Include="Views\CartelleCliniche\Create.cshtml" />
     <Content Include="Views\Beeper\Index.cshtml" />
-    <Content Include="Views\CartelleCliniches\Create.cshtml" />
     <Content Include="Views\CartelleCliniche\Delete.cshtml" />
-    <Content Include="Views\CartelleCliniches\Details.cshtml" />
     <Content Include="Views\CartelleCliniche\Edit.cshtml" />
-    <Content Include="Views\CartelleCliniches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2009,6 +2010,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703122202454_AggiunteAllergieDesc.resx">
       <DependentUpon>201703122202454_AggiunteAllergieDesc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703151905464_CorrettaCC.resx">
+      <DependentUpon>201703151905464_CorrettaCC.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
