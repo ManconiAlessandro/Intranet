@@ -29,5 +29,15 @@ namespace Intranet.Controllers
                 return View(result);
             }
         }
+
+        public ActionResult Requisiti()
+        {
+            return View();
+        }
+
+        public ActionResult Procedura()
+        {
+            return View();
+        }
     }
 }
