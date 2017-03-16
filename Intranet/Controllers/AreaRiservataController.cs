@@ -17,7 +17,7 @@ namespace Intranet.Controllers
         [HttpPost]
         public ActionResult Index(string pass)
         {
-            if (pass == "test")
+            if (pass == "ottoemezzo")
                 return RedirectToAction("RealIndex","Farmaci");
             else
             {

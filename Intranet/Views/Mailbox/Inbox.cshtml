@@ -10,9 +10,9 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-content mailbox-content">
                     <div class="file-manager">
-                        <a class="btn btn-block btn-primary compose-mail" href="@Url.Action("ComposeEmail", "Mailbox")">Compose Mail</a>
+                        <a class="btn btn-block btn-primary compose-mail" id="newMail">Nuovo</a>
                         <div class="space-25"></div>
-                        <h5>Folders</h5>
+                        @*<h5>Folders</h5>
                         <ul class="folder-list m-b-md" style="padding: 0">
                             <li><a href="@Url.Action("Inbox", "Mailbox")"> <i class="fa fa-inbox "></i> Inbox <span class="label label-warning pull-right">16</span> </a></li>
                             <li><a href="@Url.Action("Inbox", "Mailbox")"> <i class="fa fa-envelope-o"></i> Send Mail</a></li>
@@ -40,7 +40,7 @@
                             <li><a href=""><i class="fa fa-tag"></i> Photography</a></li>
                             <li><a href=""><i class="fa fa-tag"></i> Film</a></li>
                         </ul>
-                        <div class="clearfix"></div>
+                        <div class="clearfix"></div>*@
                     </div>
                 </div>
             </div>
@@ -48,21 +48,11 @@
         <div class="col-lg-9 animated fadeInRight">
             <div class="mail-box-header">
 
-                <form method="get" action="#" class="pull-right mail-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control input-sm" name="search" placeholder="Search email">
-                        <div class="input-group-btn">
-                            <button type="submit" class="btn btn-sm btn-primary">
-                                Search
-                            </button>
-                        </div>
-                    </div>
-                </form>
                 <h2>
                     Inbox (16)
                 </h2>
                 <div class="mail-tools tooltip-demo m-t-md">
-                    <div class="btn-group pull-right">
+                    @*<div class="btn-group pull-right">
                         <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
                         <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
 
@@ -70,7 +60,7 @@
                     <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="Refresh inbox"><i class="fa fa-refresh"></i> Refresh</button>
                     <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
                     <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as important"><i class="fa fa-exclamation"></i> </button>
-                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to trash"><i class="fa fa-trash-o"></i> </button>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to trash"><i class="fa fa-trash-o"></i> </button>*@
 
                 </div>
             </div>
@@ -271,6 +261,10 @@
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
+            });
+
+            $('#newMail').click(function () {
+                alert("Fuzionalità disabilitata");
             });
 
         });

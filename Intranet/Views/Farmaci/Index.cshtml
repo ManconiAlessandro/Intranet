@@ -102,7 +102,7 @@
                     //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
                     //alert('View: ' + view.name);
 
-                    
+
                     //fare il popover dismissable e dinamico con ajax che pesca dal db DIO PORCO
 
                     $(this).popover({
@@ -114,16 +114,28 @@
                         },
                         content: function () {
                             var cont = '';
-                            cont += 'Somministrazione in fase di accettazione tramite iniettore predosato.<br/>';
-                            cont += 'Una dose di  X798 a soggetto.<br/>';
-                            cont += 'Note: ATTENZIONE, tutti i soggetti devono ricevere la somministrazione entro le 11.30 del mattino';
+
+                            if (calEvent.title == 'X798') {
+                                cont += 'Somministrazione in fase di accettazione tramite iniettore predosato.<br/>';
+                                cont += 'Una dose di  X798 a soggetto.<br/>';
+                                cont += 'Note: ATTENZIONE, tutti i soggetti devono ricevere la somministrazione entro le 11.30 del mattino';
+                            }
+                            else if (calEvent.title == 'U591') {
+                                cont += 'Somministrazione di stabilizzante U591 attraverso bevande o alimenti 5mlg per litro di acqua.<br/>';
+                                cont += 'Note: ATTENZIONE, vietare assolutamente somministrazione di alcolici in questa fase';
+                            }
+                            else if (calEvent.title == 'Z675') {
+                                cont += 'Somministrazione di attuatore Z675 per via aerea attraverso vaporizzatori ambientali.<br/>';
+                                cont += 'Una dose di  X798 a soggetto.<br/>';
+                                cont += 'Note: ATTENZIONE, la somministrazione dell’attuatore è innocua per il personale di servizio';
+                            }
                             return cont;
                         }
                     });
 
                     $(this).popover('show');
 
-                    
+
 
                     // change the border color just for fun
                     //$(this).css('border-color', 'red');

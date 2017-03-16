@@ -191,7 +191,6 @@
     <Compile Include="Controllers\CentralinaController.cs" />
     <Compile Include="Controllers\PersonaleController.cs" />
     <Compile Include="Controllers\ProceduraEmergenzaController.cs" />
-    <Compile Include="Controllers\ProceduraController.cs" />
     <Compile Include="Controllers\ProgettoController.cs" />
     <Compile Include="Controllers\TerapieController.cs" />
     <Compile Include="Controllers\TurniController.cs" />
@@ -1958,7 +1957,6 @@
     <Content Include="Views\Farmaci\RealIndex.cshtml" />
     <Content Include="Views\Shared\_LayoutReserved.cshtml" />
     <Content Include="Views\ProceduraEmergenza\Index.cshtml" />
-    <Content Include="Views\Procedura\Index.cshtml" />
     <Content Include="Views\Progetto\Finalita.cshtml" />
     <Content Include="Views\CartelleCliniche\SpecialIndex.cshtml" />
     <Content Include="Views\Centralina\Index.cshtml" />
@@ -1972,6 +1970,8 @@
     <Content Include="Views\Personale\Details.cshtml" />
     <Content Include="Views\Personale\Edit.cshtml" />
     <Content Include="Views\Personale\Index.cshtml" />
+    <Content Include="Views\Progetto\Procedura.cshtml" />
+    <Content Include="Views\Progetto\Requisiti.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
