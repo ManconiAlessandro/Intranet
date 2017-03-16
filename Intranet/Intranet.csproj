@@ -189,10 +189,10 @@
     <Compile Include="Controllers\BeeperController.cs" />
     <Compile Include="Controllers\CartelleClinicheController.cs" />
     <Compile Include="Controllers\CentralinaController.cs" />
+    <Compile Include="Controllers\PersonaleController.cs" />
     <Compile Include="Controllers\ProceduraEmergenzaController.cs" />
     <Compile Include="Controllers\ProceduraController.cs" />
     <Compile Include="Controllers\ProgettoController.cs" />
-    <Compile Include="Controllers\PersonaleController.cs" />
     <Compile Include="Controllers\TerapieController.cs" />
     <Compile Include="Controllers\TurniController.cs" />
     <Compile Include="Controllers\FarmaciController.cs" />
@@ -277,6 +277,14 @@
     <Compile Include="Migrations\201703151905464_CorrettaCC.cs" />
     <Compile Include="Migrations\201703151905464_CorrettaCC.Designer.cs">
       <DependentUpon>201703151905464_CorrettaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703161233151_PersonaleV2.cs" />
+    <Compile Include="Migrations\201703161233151_PersonaleV2.Designer.cs">
+      <DependentUpon>201703161233151_PersonaleV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703161238526_PersonaleV3.cs" />
+    <Compile Include="Migrations\201703161238526_PersonaleV3.Designer.cs">
+      <DependentUpon>201703161238526_PersonaleV3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ScopoProgettoViewModels.cs" />
@@ -1949,7 +1957,6 @@
     <Content Include="Views\AreaRiservata\Index.cshtml" />
     <Content Include="Views\Farmaci\RealIndex.cshtml" />
     <Content Include="Views\Shared\_LayoutReserved.cshtml" />
-    <Content Include="Views\Personale\Index.cshtml" />
     <Content Include="Views\ProceduraEmergenza\Index.cshtml" />
     <Content Include="Views\Procedura\Index.cshtml" />
     <Content Include="Views\Progetto\Finalita.cshtml" />
@@ -1960,6 +1967,11 @@
     <Content Include="Views\Beeper\Index.cshtml" />
     <Content Include="Views\CartelleCliniche\Delete.cshtml" />
     <Content Include="Views\CartelleCliniche\Edit.cshtml" />
+    <Content Include="Views\Personale\Create.cshtml" />
+    <Content Include="Views\Personale\Delete.cshtml" />
+    <Content Include="Views\Personale\Details.cshtml" />
+    <Content Include="Views\Personale\Edit.cshtml" />
+    <Content Include="Views\Personale\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2013,6 +2025,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703151905464_CorrettaCC.resx">
       <DependentUpon>201703151905464_CorrettaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703161233151_PersonaleV2.resx">
+      <DependentUpon>201703161233151_PersonaleV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703161238526_PersonaleV3.resx">
+      <DependentUpon>201703161238526_PersonaleV3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

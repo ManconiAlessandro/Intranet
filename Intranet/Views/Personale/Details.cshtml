@@ -1,0 +1,330 @@
+﻿@model Intranet.Models.Personale
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Personale</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroMatricola)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroMatricola)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cognome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cognome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.href)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.href)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LuogoDiNascita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LuogoDiNascita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDiNascita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDiNascita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sesso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sesso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodiceFiscale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodiceFiscale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cittadinanza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cittadinanza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatoCivile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatoCivile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDelConiuge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeDelConiuge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfessioneAttuale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfessioneAttuale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Residenza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Residenza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvitatoDa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvitatoDa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Peso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Peso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Altezza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Altezza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDiNascita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDiNascita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ManoDominante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManoDominante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDiAllattamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDiAllattamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Allergie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Allergie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AllergieDescrizione)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllergieDescrizione)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Convulsioni)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Convulsioni)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vertigini)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vertigini)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nevralgie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nevralgie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Insonnia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insonnia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NevrosismoDepressione)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NevrosismoDepressione)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VomitoNeurologico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VomitoNeurologico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FamiliariPatologieFisiche)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FamiliariPatologieFisiche)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FamiliariPatologiePsicologiche)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FamiliariPatologiePsicologiche)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FamiliariPatologiePsichiatriche)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FamiliariPatologiePsichiatriche)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatologieFisicheGravi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatologieFisicheGravi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatologiePsicologiche)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatologiePsicologiche)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatologiePsichiatriche)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatologiePsichiatriche)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoriaRemotaEPresente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoriaRemotaEPresente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diagnosi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diagnosi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TendenzaAllaViolenza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TendenzaAllaViolenza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LivelloConformita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LivelloConformita)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDPersonale }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
