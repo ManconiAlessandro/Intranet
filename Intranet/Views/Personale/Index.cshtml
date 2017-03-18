@@ -3,21 +3,20 @@
     ViewBag.Title = "Personale";
     Layout = "../Shared/_LayoutReserved.cshtml";
 }
-
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
         <h2>Personale</h2>
         @*<ol class="breadcrumb">
-            <li>
-                <a href="index.html"></a>
-            </li>
-            <li>
-                <a></a>
-            </li>
-            <li class="active">
-                <strong></strong>
-            </li>
-        </ol>*@
+                <li>
+                    <a href="index.html"></a>
+                </li>
+                <li>
+                    <a></a>
+                </li>
+                <li class="active">
+                    <strong></strong>
+                </li>
+            </ol>*@
     </div>
     <div class="col-lg-2">
     </div>
@@ -31,7 +30,6 @@
         <div class="col-lg-12">
             <div class="tabs-container">
                 <div class="tabs-left">
-
                     <ul class="nav nav-tabs">
                         @foreach (var item in Model)
                         {
@@ -57,262 +55,71 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="col-md-12 "><h1>Cartella Clinica</h1></div>
-
                                         <div class="col-md-12"><p><strong>@item.NomeCompleto</strong></p></div>
                                         <div class="col-md-12"><p><b>N°:</b>    @item.NumeroMatricola </p></div>
-
                                         <div class="col-md-5"><b>Luogo di Nascita:</b>    @item.LuogoDiNascita </div>
                                         <div class="col-md-3"><b>Data di Nascita:</b>    @item.DataDiNascita </div>
                                         <div class="col-md-2"><b>Età:</b>    @item.Eta </div>
                                         <div class="col-md-2"><b>Sesso:</b>    @item.Sesso </div>
-
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
-
                                         <div class="col-md-6"><b>Codice Fiscale:  </b> @item.CodiceFiscale </div>
                                         <div class="col-md-6"><b>Cittadinanza:  </b> @item.Cittadinanza</div>
-
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
-
                                         <div class="col-md-4"><b>Stato civile:  </b> @item.StatoCivile </div>
                                         <div class="col-md-8"><b>Nome del coniuge:  </b> @item.NomeDelConiuge</div>
-
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
-
                                         <div class="col-md-3"><b>Figli/altri parenti prossimi:  </b> / </div>
                                         <div class="col-md-9"><b>Rifiuta contatti con familiari:    </b><i>Deliberatoria firmata</i></div>
-
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
-
                                         <div class="col-md-12"><b>Professione Attuale:  </b> @item.ProfessioneAttuale</div>
-
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
-
                                         <div class="col-md-12"><b>Residenza:  </b> @item.Residenza</div>
-
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
-
                                         <div class="col-md-12"><b>Telefono:  </b> @item.Telefono</div>
-
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
-
-                                        <div class="col-md-12"><b>Invitato da:  </b> @item.InvitatoDa</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
                                         <div class="col-md-3"><b>Peso:  </b> @item.Peso</div>
                                         <div class="col-md-9"><b>Altezza:  </b> @item.Altezza</div>
-
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
-
                                         <div class="col-md-12"><b>Data della Prima Visita:  </b> 13/05/2017</div>
-
                                         <div class="col-md-12">
                                             <p></p>
                                             <p></p>
                                         </div>
-
                                         <div class="col-md-12 ">
                                             <h1>Carichi pendenti:</h1>
-                                            <h2>Informazioni di carattere generale:</h2>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Tipo di nascita:  </b> @item.TipoDiNascita</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Mano dominante:  </b> @item.ManoDominante</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Tipo di allattamento:  </b> @item.TipoDiAllattamento</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><h3>Ha mai avuto...  </h3></div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-2"><b>Allergie:  </b> @item.Allergie</div>
-                                        <div class="col-md-">@item.AllergieDescrizione</div>
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Convulsioni:  </b> @item.Convulsioni</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Vertigini:  </b> @item.Vertigini</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Nevralgie:  </b> @item.Nevralgie</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Insonnia:  </b> @item.Insonnia</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Nervosismo-depressione:  </b> @item.NevrosismoDepressione</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Vomito neurologico:  </b> @item.VomitoNeurologico</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12 ">
-                                            <h1>Anamnesi Familiare:</h1>
-                                        </div>
-
-                                        <div class="col-md-12"><h3>Ha mai avuto un familiare con: </h3></div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <b>
-                                                Patologie Fisiche (specificare quali):
-                                            </b> @item.FamiliariPatologieFisiche
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Patologie del ramo Psicologico (senza assunzione di farmaci):</b> @item.FamiliariPatologiePsicologiche</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Patologie del ramo Psichiatrico (con assunzione di farmaci):</b> @item.FamiliariPatologiePsichiatriche</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12 ">
-                                            <h1>Anamnesi Remota:</h1>
-                                        </div>
-
-                                        <div class="col-md-12"><h3>Le hanno mai diagnosticato: </h3></div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Patologie fisiche gravi (specificare patologia e cura):  </b> @item.PatologieFisicheGravi</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Patologie del ramo Psicologico (specificare patologia e cura):</b> @item.PatologiePsicologiche</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Patologie del ramo Psichiatrico (specificare patologia e cura):</b> @item.PatologiePsichiatriche</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12 ">
-                                            <h1>Anamnesi Recente:</h1>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Storia remota e recente:  </b> @item.StoriaRemotaEPresente</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Diagnosi: </b> @item.Diagnosi</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
                                         </div>
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
-
-                                        <div class="col-md-12 ">
-                                            <h3>Scale di valutazione:</h3>
-                                        </div>
-
+                                        <div class="col-md-12"><b>Stato:  </b> @item.CarichiPendentiEsito</div>
                                         <div class="col-md-12">
                                             <p></p>
                                         </div>
+                                        @if (item.CarichiPendentiEsito == "Positivo")
+                                        {
+                                            <div class="col-md-12"><b>Reati a carico:  </b> @item.CarichiPendentiDescrizione</div>
 
-                                        <div class="col-md-12"><b>Livello di tendenza alla Violenza secondo Scala D639:  </b> @item.TendenzaAllaViolenza /40</div>
+                                            <div class="col-md-12">
+                                                <p></p>
+                                            </div>
+                                        }
 
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
-
-                                        <div class="col-md-12"><b>Livello di Conformità al Progetto secondo scala Ditter:</b> @item.LivelloConformita /10</div>
-
-                                        <div class="col-md-12">
-                                            <p></p>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -323,5 +130,3 @@
         </div>
     </div>
 </div>
-
-

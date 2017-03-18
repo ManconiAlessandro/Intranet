@@ -7,6 +7,8 @@ namespace Intranet.Enums
 {
     public class HtmlLists
     {
+
+        //Generico
         public static IEnumerable<string> GenderList = new List<string>
         {
             "Maschio",
@@ -43,12 +45,24 @@ namespace Intranet.Enums
             "Artificiale",
         };
 
+
+        //Cartelle Cliniche
+
         public static IEnumerable<int> VarieScale = new List<int>
         {
             1,
             2,
             3,
             4
+        };
+        
+
+        //Personale
+
+        public static IEnumerable<string> CarichiPendentiEsitiList = new List<string>
+        {
+            "Negativo",
+            "Positivo",
         };
     }
 }

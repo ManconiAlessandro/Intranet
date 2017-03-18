@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Create";
+    Layout = "../Shared/_LayoutReserved.cshtml";
 }
 
 <h2>Aggiungi Membro del Personale</h2>
@@ -128,14 +129,6 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.InvitatoDa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.InvitatoDa, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.InvitatoDa, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.Peso, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Peso, new { htmlAttributes = new { @class = "form-control" } })
@@ -152,166 +145,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TipoDiNascita, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CarichiPendentiEsito, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-3">
-                @Html.DropDownListFor(model => model.TipoDiNascita, new SelectList(Intranet.Enums.HtmlLists.TipoDiNascitaList), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.TipoDiNascita, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.CarichiPendentiEsito, new SelectList(Intranet.Enums.HtmlLists.CarichiPendentiEsitiList), htmlAttributes: new { @class = "form-control m-b" })
+                @Html.ValidationMessageFor(model => model.CarichiPendentiEsito, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ManoDominante, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-3">
-                @Html.DropDownListFor(model => model.ManoDominante, new SelectList(Intranet.Enums.HtmlLists.ManoDominanteList), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.ManoDominante, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TipoDiAllattamento, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-3">
-                @Html.DropDownListFor(model => model.TipoDiAllattamento, new SelectList(Intranet.Enums.HtmlLists.TipoDiAllattamentoList), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.TipoDiAllattamento, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Allergie, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-1">
-                @Html.DropDownListFor(model => model.Allergie, new SelectList(Intranet.Enums.HtmlLists.VarieScale), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.Allergie, "", new { @class = "text-danger" })
-            </div>
-            <div class="col-md-9">
-                @Html.EditorFor(model => model.AllergieDescrizione, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AllergieDescrizione, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Convulsioni, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-2">
-                @Html.DropDownListFor(model => model.Convulsioni, new SelectList(Intranet.Enums.HtmlLists.VarieScale), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.Convulsioni, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Vertigini, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-2">
-                @Html.DropDownListFor(model => model.Vertigini, new SelectList(Intranet.Enums.HtmlLists.VarieScale), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.Vertigini, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nevralgie, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-2">
-                @Html.DropDownListFor(model => model.Nevralgie, new SelectList(Intranet.Enums.HtmlLists.VarieScale), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.Nevralgie, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Insonnia, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-2">
-                @Html.DropDownListFor(model => model.Insonnia, new SelectList(Intranet.Enums.HtmlLists.VarieScale), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.Insonnia, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NevrosismoDepressione, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-2">
-                @Html.DropDownListFor(model => model.NevrosismoDepressione, new SelectList(Intranet.Enums.HtmlLists.VarieScale), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.NevrosismoDepressione, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.VomitoNeurologico, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-2">
-                @Html.DropDownListFor(model => model.VomitoNeurologico, new SelectList(Intranet.Enums.HtmlLists.VarieScale), htmlAttributes: new { @class = "form-control m-b" })
-                @Html.ValidationMessageFor(model => model.VomitoNeurologico, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.FamiliariPatologieFisiche, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CarichiPendentiDescrizione, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.FamiliariPatologieFisiche, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FamiliariPatologieFisiche, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.FamiliariPatologiePsicologiche, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FamiliariPatologiePsicologiche, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FamiliariPatologiePsicologiche, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.FamiliariPatologiePsichiatriche, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FamiliariPatologiePsichiatriche, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FamiliariPatologiePsichiatriche, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PatologieFisicheGravi, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PatologieFisicheGravi, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PatologieFisicheGravi, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PatologiePsicologiche, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PatologiePsicologiche, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PatologiePsicologiche, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PatologiePsichiatriche, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PatologiePsichiatriche, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PatologiePsichiatriche, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.StoriaRemotaEPresente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextAreaFor(model => model.StoriaRemotaEPresente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.StoriaRemotaEPresente, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Diagnosi, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Diagnosi, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Diagnosi, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TendenzaAllaViolenza, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TendenzaAllaViolenza, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TendenzaAllaViolenza, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LivelloConformita, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LivelloConformita, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LivelloConformita, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CarichiPendentiDescrizione, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CarichiPendentiDescrizione, "", new { @class = "text-danger" })
             </div>
         </div>
 

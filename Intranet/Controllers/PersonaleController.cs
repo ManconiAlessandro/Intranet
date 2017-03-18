@@ -51,7 +51,7 @@ namespace Intranet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IDPersonale,NumeroMatricola,Nome,Cognome,href,LuogoDiNascita,DataDiNascita,Eta,Sesso,CodiceFiscale,Cittadinanza,StatoCivile,NomeDelConiuge,ProfessioneAttuale,Residenza,Telefono,InvitatoDa,Peso,Altezza,TipoDiNascita,ManoDominante,TipoDiAllattamento,Allergie,AllergieDescrizione,Convulsioni,Vertigini,Nevralgie,Insonnia,NevrosismoDepressione,VomitoNeurologico,FamiliariPatologieFisiche,FamiliariPatologiePsicologiche,FamiliariPatologiePsichiatriche,PatologieFisicheGravi,PatologiePsicologiche,PatologiePsichiatriche,StoriaRemotaEPresente,Diagnosi,TendenzaAllaViolenza,LivelloConformita")] Personale personale)
+        public ActionResult Create([Bind(Include = "IDPersonale,NumeroMatricola,Nome,Cognome,href,LuogoDiNascita,DataDiNascita,Eta,Sesso,CodiceFiscale,Cittadinanza,StatoCivile,NomeDelConiuge,ProfessioneAttuale,Residenza,Telefono,InvitatoDa,Peso,Altezza,CarichiPendentiEsito,CarichiPendentiDescrizione")] Personale personale)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace Intranet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDPersonale,NumeroMatricola,Nome,Cognome,href,LuogoDiNascita,DataDiNascita,Eta,Sesso,CodiceFiscale,Cittadinanza,StatoCivile,NomeDelConiuge,ProfessioneAttuale,Residenza,Telefono,InvitatoDa,Peso,Altezza,TipoDiNascita,ManoDominante,TipoDiAllattamento,Allergie,AllergieDescrizione,Convulsioni,Vertigini,Nevralgie,Insonnia,NevrosismoDepressione,VomitoNeurologico,FamiliariPatologieFisiche,FamiliariPatologiePsicologiche,FamiliariPatologiePsichiatriche,PatologieFisicheGravi,PatologiePsicologiche,PatologiePsichiatriche,StoriaRemotaEPresente,Diagnosi,TendenzaAllaViolenza,LivelloConformita")] Personale personale)
+        public ActionResult Edit([Bind(Include = "IDPersonale,NumeroMatricola,Nome,Cognome,href,LuogoDiNascita,DataDiNascita,Eta,Sesso,CodiceFiscale,Cittadinanza,StatoCivile,NomeDelConiuge,ProfessioneAttuale,Residenza,Telefono,InvitatoDa,Peso,Altezza,CarichiPendentiEsito,CarichiPendentiDescrizione")] Personale personale)
         {
             if (ModelState.IsValid)
             {

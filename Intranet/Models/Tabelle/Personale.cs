@@ -37,41 +37,10 @@ namespace Intranet.Models
         public String InvitatoDa { get; set; }
         public String Peso { get; set; }
         public String Altezza { get; set; }
-        [DisplayName("Tipo Di Nascita")]
-        public String TipoDiNascita { get; set; }
-        [DisplayName("Mano Dominante")]
-        public String ManoDominante { get; set; }
-        [DisplayName("Tipo Di Allattamento")]
-        public String TipoDiAllattamento { get; set; }
-        public String Allergie { get; set; }
-        public String AllergieDescrizione { get; set; }
-        public String Convulsioni { get; set; }
-        public String Vertigini { get; set; }
-        public String Nevralgie { get; set; }
-        public String Insonnia { get; set; }
-        [DisplayName("Nevrosismo Depressione")]
-        public String NevrosismoDepressione { get; set; }
-        [DisplayName("Vomito Neurologico")]
-        public String VomitoNeurologico { get; set; }
-        [DisplayName("Familiari con Patologie Fisiche (specificare quali)")]
-        public String FamiliariPatologieFisiche { get; set; }
-        [DisplayName("Familiari con Patologie Psicologiche (senza assunzione di farmaci)")]
-        public String FamiliariPatologiePsicologiche { get; set; }
-        [DisplayName("Familiari con Patologie Psichiatriche (con assunzione di farmaci)")]
-        public String FamiliariPatologiePsichiatriche { get; set; }
-        [DisplayName("Patologie Fisiche Gravi (specificare patologia e cura)")]
-        public String PatologieFisicheGravi { get; set; }
-        [DisplayName("Patologie Psicologiche (specificare patologia e cura)")]
-        public String PatologiePsicologiche { get; set; }
-        [DisplayName("Patologie Psichiatriche (specificare patologia e cura)")]
-        public String PatologiePsichiatriche { get; set; }
-        [DisplayName("Storia remota e recente")]
-        public String StoriaRemotaEPresente { get; set; }
-        public String Diagnosi { get; set; }
-        [DisplayName("Tendenza Alla Violenza (Secondo Scala D639)")]
-        public String TendenzaAllaViolenza { get; set; }
-        [DisplayName("Livello Conformita (Secondo scala Ditter)")]
-        public String LivelloConformita { get; set; }
+        [DisplayName("Stato Carichi Pendenti")]
+        public String CarichiPendentiEsito { get; set; }
+        [DisplayName("Reati a carico")]
+        public String CarichiPendentiDescrizione { get; set; }
     }
 }
 
