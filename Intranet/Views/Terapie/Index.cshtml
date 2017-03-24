@@ -37,19 +37,18 @@
     </div>
 </div>
 
+
 @section Styles {
     @Styles.Render("~/plugins/fullCalendarStyles")
     @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
 }
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/plugins/fullCalendar")
     @Scripts.Render("~/plugins/iCheck")
-
     <script type="text/javascript">
         $(document).ready(function () {
-            
+
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
@@ -93,14 +92,65 @@
                 dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'],
                 monthNamesShort: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'],
                 columnFormat: 'ddd DD',
+                minTime: '08:00:00',
+                maxTime: '20:00:00',
+                eventClick: function (calEvent, jsEvent, view) {
+
+                    //alert('Event: ' + calEvent.title);
+                    //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+                    //alert('View: ' + view.name);
+
+
+                    //fare il popover dismissable e dinamico con ajax che pesca dal db DIO PORCO
+
+                    //$(this).popover({
+                    //    html: true,
+                    //    placement: 'bottom',
+                    //    container: 'body',
+                    //    title: function () {
+                    //        return calEvent.title
+                    //    },
+                    //    content: function () {
+                    //        var cont = '';
+
+                    //        if (calEvent.title == 'Ciclo 1') {
+                    //            cont += 'Somministrazione in fase di accettazione tramite iniettore predosato.<br/>';
+                    //            cont += 'Una dose di  X798 a soggetto.<br/>';
+                    //            cont += 'Note: ATTENZIONE, tutti i soggetti devono ricevere la somministrazione entro le 11.30 del mattino';
+                    //        }
+                    //        else if (calEvent.title == 'Ciclo 2') {
+                    //            cont += 'Somministrazione di stabilizzante U591 attraverso bevande o alimenti 5mlg per litro di acqua.<br/>';
+                    //            cont += 'Note: ATTENZIONE, vietare assolutamente somministrazione di alcolici in questa fase';
+                    //        }
+                    //        else if (calEvent.title == 'Ciclo 3') {
+                    //            cont += 'Somministrazione di attuatore Z675 per via aerea attraverso vaporizzatori ambientali.<br/>';
+                    //            cont += 'Una dose di  X798 a soggetto.<br/>';
+                    //            cont += 'Note: ATTENZIONE, la somministrazione dell’attuatore è innocua per il personale di servizio';
+                    //        }
+                    //        else if (calEvent.title == 'Ciclo 4') {
+                    //            cont += 'Somministrazione di attuatore Z675 per via aerea attraverso vaporizzatori ambientali.<br/>';
+                    //            cont += 'Una dose di  X798 a soggetto.<br/>';
+                    //            cont += 'Note: ATTENZIONE, la somministrazione dell’attuatore è innocua per il personale di servizio';
+                    //        }
+                    //        return cont;
+                    //    }
+                    //});
+
+                    //$(this).popover('show');
+
+
+
+                    // change the border color just for fun
+                    //$(this).css('border-color', 'red');
+                },
                 buttonText:
-                    {
-                        today:    'Oggi',
-                        month:    'Mese',
-                        week:     'Settimana',
-                        day:      'Giorno',
-                        list:     'Lista'
-                    },
+                {
+                    today: 'Oggi',
+                    month: 'Mese',
+                    week: 'Settimana',
+                    day: 'Giorno',
+                    list: 'Lista'
+                },
                 header: {
                     left: 'prev,next today',
                     center: 'title',
@@ -117,52 +167,61 @@
                 },
                 events: [
                     {
-                        title: 'All Day Event',
-                        start: new Date(y, m, 1)
-                    },
-                    {
-                        title: 'Long Event',
-                        start: new Date(y, m, d - 5),
-                        end: new Date(y, m, d - 2),
-                    },
-                    {
-                        id: 999,
-                        title: 'Repeating Event',
-                        start: new Date(y, m, d - 3, 16, 0),
-                        allDay: false,
-                    },
-                    {
-                        id: 999,
-                        title: 'Repeating Event',
-                        start: new Date(y, m, d + 4, 16, 0),
+                        title: 'Ciclo 1',
+                        start: new Date(y, m, d, 12, 30),
+                        end: new Date(y, m, d, 13, 15),
                         allDay: false
                     },
                     {
-                        title: 'Meeting',
-                        start: new Date(y, m, d, 10, 30),
+                        title: 'Ciclo 2',
+                        start: new Date(y, m, d, 13, 45),
+                        end: new Date(y, m, d, 14, 15),
                         allDay: false
                     },
                     {
-                        title: 'Lunch',
-                        start: new Date(y, m, d, 12, 0),
-                        end: new Date(y, m, d, 14, 0),
+                        title: 'Ciclo 3',
+                        start: new Date(y, m, d, 15, 45),
+                        end: new Date(y, m, d, 16, 15),
                         allDay: false
                     },
                     {
-                        title: 'Birthday Party',
-                        start: new Date(y, m, d + 1, 19, 0),
-                        end: new Date(y, m, d + 1, 22, 30),
+                        title: 'Ciclo 4',
+                        start: new Date(y, m, d, 16, 30),
+                        end: new Date(y, m, d, 17, 0),
                         allDay: false
                     },
-                    {
-                        title: 'Click for Google',
-                        start: new Date(y, m, 28),
-                        end: new Date(y, m, 29),
-                        url: 'http://google.com/'
-                    }
+                    //{
+                    //    title: 'Long Event',
+                    //    start: new Date(y, m, d - 5),
+                    //    end: new Date(y, m, d - 2),
+                    //},
+                    //{
+                    //    id: 999,
+                    //    title: 'Repeating Event',
+                    //    start: new Date(y, m, d - 3, 16, 0),
+                    //    allDay: false,
+                    //},
+                    //{
+                    //    id: 999,
+                    //    title: 'Repeating Event',
+                    //    start: new Date(y, m, d + 4, 16, 0),
+                    //    allDay: false
+                    //},
+                    //{
+                    //    title: 'Birthday Party',
+                    //    start: new Date(y, m, d + 1, 19, 0),
+                    //    end: new Date(y, m, d + 1, 22, 30),
+                    //    allDay: false
+                    //},
+                    //{
+                    //    title: 'Click for Google',
+                    //    start: new Date(y, m, 28),
+                    //    end: new Date(y, m, 29),
+                    //    url: 'http://google.com/'
+                    //}
                 ],
             });
-            
+
             $('.fc-agendaWeek-button').click();
             //$('.fc-month-button').removeClass('fc-state-active');
         });
