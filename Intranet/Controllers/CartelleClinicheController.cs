@@ -17,11 +17,18 @@ namespace Intranet.Controllers
         // GET: CartelleCliniches
         public ActionResult Index()
         {
-            using (var db = new ApplicationDbContext())
+            try
             {
-                List<CartelleCliniche> result = db.CartelleCliniche.OrderBy(n => n.Cognome).ToList();
+                using (var db = new ApplicationDbContext())
+                {
+                    List<CartelleCliniche> result = db.CartelleCliniche.OrderBy(n => n.Cognome).ToList();
 
-                return View(result);
+                    return View(result);
+                }
+            }
+            catch
+            {
+                return View(new List<CartelleCliniche>());
             }
         }
 

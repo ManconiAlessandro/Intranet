@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Compiti del Coordinatore dell’emergenza (PROC_1)";
+    Layout = "../Shared/_LayoutReserved.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-8">
+        <h2>(PROC_1)</h2>
+        @*<ol class="breadcrumb">
+                <li>
+                    <a href="@Url.Action("Dashboard_1", "Dashboards")">Home</a>
+                </li>
+                <li>
+                    Extra pages
+                </li>
+                <li class="active">
+                    <strong>Calendar</strong>
+                </li>
+            </ol>*@
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInDown">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Compiti del Coordinatore dell’emergenza</h5>
+                    @*<div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="#">Config option 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>*@
+                </div>
+                <div class="ibox-content">
+                    <p>
+                    <ol>
+                        <strong><li>Scopo della procedura</li></strong>
+                        <p>
+                            La presente procedura stabilisce i comportamenti che dovranno essere messi in atto dal Coordinatore dell’emergenza in caso di emergenza.
+                        </p>
+
+                        <strong><li>Applicabilità della procedura</li></strong>
+                        <p>
+                            La presente procedura riguarda il Coordinatore dell’emergenza.
+                        </p>
+
+                        <strong><li>Responsabilità</li></strong>
+                        <p>
+                            Il Coordinatore dell’emergenza è responsabile della valutazione della gravità dell’emergenza, e della corretta applicazione delle procedure di emergenza che lo coinvolgono.
+                        </p>
+
+                        <strong><li>Modalità esecutive</li></strong>
+                        <p>
+                            II Coordinatore nel caso rilevi direttamente o gli venga comunicata dal Centro di Coordinamento (atrio) una situazione di emergenza, ovvero nel caso in cui si attivi un allarme (suono della campanella o a seguito di segnalazione telefonica) deve:
+                            <p>
+                                <ul>
+                                    <li>
+                                        Recarsi immediatamente al Centro di Coordinamento assumendo il controllo delle operazioni per la risoluzione dell’emergenza;
+                                    </li>
+
+                                    <li>
+                                        Verificare che le azioni a carico degli addetti presenti siano state eseguite;
+                                    </li>
+
+                                    <li>
+                                        Chiedere, se lo ritiene opportuno, in relazione all’entità e all’evoluzione dell’emergenza, l’intervento degli enti specializzati dell’organizzazione,  dando disposizioni a garanzia della accessibilità all’area da parte dei mezzi di intervento;
+                                    </li>
+
+                                    <li>
+                                        Disporre l’attivazione delle procedure di evacuazione parziale o totale della sede;
+                                    </li>
+
+                                    <li>
+                                        Mettersi, all’arrivo del responsabile degli organi specializzati, a sua disposizione informandolo sull’evoluzione dell’emergenza e su quanto già attuato.
+                                    </li>
+                                </ul>
+                            </p>
+                    </ol>
+
+                            <p>
+                                Durante l’attività ordinaria deve:
+                                    <ul>
+                                        <li>
+                                            Verificare la presenza dei componenti la squadra di intervento;
+                                        </li>
+
+                                        <li>
+                                            Procedere alla verifica periodica circa la funzionalità dei dispositivi di allertamento della squadra;
+                                        </li>
+
+                                        <li>
+                                            Prevedere periodici incontri di coordinamento (almeno 2 volte all’anno) con i componenti la squadra di intervento.
+                                        </li>
+                                    </ul>
+                            </p>
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/plugins/iCheck")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$('.fc-month-button').removeClass('fc-state-active')
+            //$('.fc-agendaDay-button').addClass('fc-state-active');
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+            /* initialize the external events
+             -----------------------------------------------------------------*/
+        });
+    </script>
+}

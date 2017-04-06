@@ -1976,6 +1976,11 @@
     <Content Include="Views\Personale\Index.cshtml" />
     <Content Include="Views\Progetto\Procedura.cshtml" />
     <Content Include="Views\Progetto\Requisiti.cshtml" />
+    <Content Include="Views\ProceduraEmergenza\Proc_1.cshtml" />
+    <Content Include="Views\ProceduraEmergenza\Proc_2.cshtml" />
+    <Content Include="Views\ProceduraEmergenza\Proc_3.cshtml" />
+    <Content Include="Views\ProceduraEmergenza\Proc_4.cshtml" />
+    <Content Include="Views\ProceduraEmergenza\Proc_5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

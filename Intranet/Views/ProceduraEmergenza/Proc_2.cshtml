@@ -1,0 +1,126 @@
+﻿@{
+    Layout = "../Shared/_LayoutReserved.cshtml";
+}
+
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-8">
+        <h2>(PROC_2)</h2>
+        @*<ol class="breadcrumb">
+                <li>
+                    <a href="@Url.Action("Dashboard_1", "Dashboards")">Home</a>
+                </li>
+                <li>
+                    Extra pages
+                </li>
+                <li class="active">
+                    <strong>Calendar</strong>
+                </li>
+            </ol>*@
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInDown">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Compiti dell’addetto alla comunicazione </h5>
+                    @*<div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="#">Config option 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>*@
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        <ol>
+                            <strong><li>Scopo della procedura</li></strong>
+                    <p>
+                        La presente procedura stabilisce i comportamenti che deve tenere l’addetto alla comunicazione in caso di emergenza.
+                    </p>
+
+                    <strong><li>Applicabilità della procedura</li></strong>
+                    <p>
+                        La presente procedura riguarda l’addetto comunicazione.
+                    </p>
+
+                    <strong><li>Responsabilità</li></strong>
+                    <p>
+                        L’addetto alla comunicazione ha la responsabilità di avvisare il Coordinatore dell’emergenza, e di applicare correttamente le procedure di emergenza che lo coinvolgono.
+                    </p>
+
+                    <strong><li>Modalità esecutive</li></strong>
+                    <p>
+                        L’addetto alle comunicazioni al segnale di allarme o a seguito di segnalazione telefonica deve:
+                    <p>
+                        <ul>
+                            <li>
+                                Avvisare dell’emergenza il Coordinatore;
+                            </li>
+
+                            <li>
+                                Attivare, su disposizioni del Coordinatore o di uno degli addetti, la procedura di emergenza;
+                            </li>
+
+                            <li>
+                                Passare solo le telefonate relative all’emergenza smistandole al coordinatore dell’emergenza;
+                            </li>
+
+                            <li>
+                                Rispondere, all’atto dell’emergenza, con rapidità, interrompendo qualsiasi comunicazione con l’esterno;
+                            </li>
+
+                            <li>
+                                Attuare, nei casi di sommossa con infortunio, le procedure relative all’emergenza di tipo sanitario;
+                            </li>
+
+                            <li>
+                                Rimanere al centro di coordinamento a disposizione del coordinatore.
+                            </li>
+                        </ul>
+                    </p>
+                    </ol>
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/plugins/iCheck")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$('.fc-month-button').removeClass('fc-state-active')
+            //$('.fc-agendaDay-button').addClass('fc-state-active');
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+            /* initialize the external events
+             -----------------------------------------------------------------*/
+        });
+    </script>
+}

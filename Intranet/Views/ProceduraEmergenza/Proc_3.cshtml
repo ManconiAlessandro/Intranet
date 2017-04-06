@@ -1,0 +1,154 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutReserved.cshtml";
+    ViewBag.Title = "Compiti degli addetti all’emergenza (PROC_3)";
+}
+
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-8">
+        <h2>(PROC_3)</h2>
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInDown">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Compiti degli addetti all’emergenza</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        <ol>
+                            <strong><li>Scopo della procedura</li></strong>
+                    <p>
+                        La presente procedura stabilisce i comportamenti che gli addetti all’emergenza devono mettere in atto in caso di emergenza.
+                    </p>
+
+                    <strong><li>Applicabilità della procedura</li></strong>
+                    <p>
+                        La presente procedura riguarda gli addetti all’emergenza.
+                    </p>
+
+                    <strong><li>Responsabilità</li></strong>
+                    <p>
+                        La responsabilità di attuare correttamente le procedure di emergenza  che li coinvolgono è affidata agli addetti all’emergenza.
+                    </p>
+
+                    <strong><li>Modalità esecutive</li></strong>
+                    <p>
+                        Gli addetti all’emergenza devono:
+                    <p>
+                        
+                        <ul>
+                            <strong>
+                                <li>
+                                    Se avvistano una situazione di emergenza ordinaria:
+                                </li>
+                            </strong>
+                            <ul>
+                                <li>
+                                    Estinguere la principale causa d’emergenza.
+                                </li>
+
+                                <li>
+                                    Intercettare gli eventuale fuggitivi;
+                                </li>
+
+                                <li>
+                                   Prestare i primi soccorsi ad eventuali infortunati;
+                                </li>
+
+                                <li>
+                                    Attuare le procedure di evacuazione del personale sanitario certificato.
+                                </li>
+                            </ul>
+                        </ul>
+                            
+                            
+                            
+                            <ul>
+                                <strong>
+                                    <li>
+                                        In caso di emergenza deve straordinaria:
+                                    </li>
+                                </strong>
+                                <ul>
+                                    <li>
+                                        Attivare allarme silenzioso
+                                    </li>
+                                </ul>
+                            </ul>
+
+                            <ul>
+                                <strong>
+                                    <li>
+                                        In caso di emergenza deve straordinaria:
+                                    </li>
+                                </strong>
+
+                                <ul>
+                                    <li>
+                                        Sospendere qualsiasi attività mettendo l’area di lavoro in sicurezza e riferirsi alla PROC_4;
+                                    </li>
+
+                                    <li>
+                                        Attivare l’allarme silenzioso d’emergenza  per l’attivazione del backup aggiornato dei dati raccolti e la trasmissione satellitare attraverso l’apposito trasmettitore esterno. NOTA:imperativo - evitare ogni manomissione da parte dei soggetti dell’apparato di comunicazione e l’eventuale compromissione dei dati, sorvegliare coordinate XXXX ;
+                                    </li>
+
+                                    <li>
+                                       Attuare le procedure di evacuazione del personale sanitario certificato.
+                                    </li>
+                                </ul>
+                            </ul>
+
+                           
+                        </ul>
+                    </p>
+                    </ol>
+
+                    @*<p>
+                        Durante l’attività ordinaria deve:
+                        <ul>
+                            <li>
+                                Verificare la presenza dei componenti la squadra di intervento;
+                            </li>
+
+                            <li>
+                                Procedere alla verifica periodica circa la funzionalità dei dispositivi di allertamento della squadra;
+                            </li>
+
+                            <li>
+                                Prevedere periodici incontri di coordinamento (almeno 2 volte all’anno) con i componenti la squadra di intervento.
+                            </li>
+                        </ul>
+                    </p>*@
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/plugins/iCheck")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$('.fc-month-button').removeClass('fc-state-active')
+            //$('.fc-agendaDay-button').addClass('fc-state-active');
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+            /* initialize the external events
+             -----------------------------------------------------------------*/
+        });
+    </script>
+}
