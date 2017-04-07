@@ -1,6 +1,172 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutReserved.cshtml";
-    ViewBag.Title = "Compiti del Coordinatore dell’emergenza (PROC_1)";
+    ViewBag.Title = "Compiti del personale che avvista l’emergenza (PROC_4)";
 }
 
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-8">
+        <h2>(PROC_4)</h2>
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInDown">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Compiti del personale che avvista l’emergenza</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        <ol>
+                            <strong><li>Scopo della procedura</li></strong>
+                    <p>
+                        La presente procedura stabilisce i comportamenti che deve tenere il personale che avvista un’emergenza.
+                    </p>
 
+                    <strong><li>Applicabilità della procedura</li></strong>
+                    <p>
+                        La presente procedura riguarda tutto il personale che avvista un’emergenza.
+                    </p>
+
+                    <strong><li>Responsabilità</li></strong>
+                    <p>
+                        Il personale che avvista un’emergenza ha la responsabilità di attuare correttamente le indicazioni riportate nella presente procedura.
+                    </p>
+
+                    <strong><li>Modalità esecutive</li></strong>
+                    <p>
+                        Il personale che avvista l’emergenza deve:
+                    <p>
+                        <ul>
+                            <li>
+                                Comunicare ogni situazione di emergenza al posto presidiato;
+                            </li>
+
+                            <li>
+                               Indicare l’area interessata e identificarla con specifica sigla.
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <strong>
+                                <li>
+                                    Se l’intervento comporta evidenti rischi e la squadra d’intervento ritarda:
+                                </li>
+                            </strong>
+                            <ul>
+                                <li>
+                                    Estinguere l’eventuale causa di sommossa;
+                                </li>
+
+                                <li>
+                                    Attivare allarme silenzioso;
+                                </li>
+
+                                <li>
+                                   Attuare le procedure di emergenza ed evacuazione del personale sanitario;
+                                </li>
+
+                                <li>
+                                    Recarsi nel punto indicato dalla mappa in allegato per il recupero delle armi.
+                                </li>
+                            </ul>
+                        </ul>
+
+
+
+                        <ul>
+                            <strong>
+                                <li>
+                                    InSe invece la situazione non è controllabile:
+                                </li>
+                            </strong>
+                            <ul>
+                                <li>
+                                    Attivare allarme silenzioso
+                                </li>
+                                <li>
+                                    Recarsi nel punto indicato nella mappa in allegato per il recupero delle armi.
+                                </li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <strong>
+                                <li>
+                                    All’insorgere dell’emergenza:
+                                </li>
+                            </strong>
+
+                            <ul>
+                                <li>
+                                    Sospendere qualsiasi attività mettendo l’area di lavoro in sicurezza;
+                                </li>
+
+                                <li>
+                                    Interrompere qualsiasi comunicazione telefonica (esterna e/o interna) non inerente l’emergenza;
+                                </li>
+
+                                <li>
+                                    Seguire le procedure di evacuazione (PROC_5);
+                                </li>
+
+                                <li>
+                                    
+                                    Rimanere a disposizione per eventuale aiuto alla squadra di intervento, se richiesto;
+                                </li>
+
+                                <li>
+                                    Nel caso stia per prendere servizio, fermarsi all’ingresso della sede e rimanere in attesa di disposizioni.
+                                </li>
+                            </ul>
+                        </ul>
+                        </ul>
+                    </p>
+                    </ol>
+
+                    @*<p>
+                            Durante l’attività ordinaria deve:
+                            <ul>
+                                <li>
+                                    Verificare la presenza dei componenti la squadra di intervento;
+                                </li>
+
+                                <li>
+                                    Procedere alla verifica periodica circa la funzionalità dei dispositivi di allertamento della squadra;
+                                </li>
+
+                                <li>
+                                    Prevedere periodici incontri di coordinamento (almeno 2 volte all’anno) con i componenti la squadra di intervento.
+                                </li>
+                            </ul>
+                        </p>*@
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/plugins/iCheck")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$('.fc-month-button').removeClass('fc-state-active')
+            //$('.fc-agendaDay-button').addClass('fc-state-active');
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+            /* initialize the external events
+             -----------------------------------------------------------------*/
+        });
+    </script>
+}
