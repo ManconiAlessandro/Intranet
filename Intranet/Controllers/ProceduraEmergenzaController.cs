@@ -8,12 +8,6 @@ namespace Intranet.Controllers
 {
     public class ProceduraEmergenzaController : Controller
     {
-
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
         public ActionResult Proc_1()
         {
             return View();

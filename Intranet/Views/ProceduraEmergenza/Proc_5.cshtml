@@ -1,6 +1,102 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutReserved.cshtml";
-    ViewBag.Title = "Compiti del Coordinatore dell’emergenza (PROC_1)";
+    ViewBag.Title = "Procedura di evacuazione dei locali (PROC_5)";
 }
 
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-8">
+        <h2>(PROC_5)</h2>
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInDown">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Procedura di evacuazione dei locali</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        <ol>
+                            <strong><li>Scopo della procedura</li></strong>
+                    <p>
+                        La presente procedura ha lo scopo di fornire indicazioni a tutto il personale coinvolto per l'evacuazione immediata del personale medico effettivo ed il contenimento dei soggetti nei locali dei locali.
+                    </p>
 
+                    <strong><li>Applicabilità della procedura</li></strong>
+                    <p>
+                        La presente procedura interessa tutto il personale del plesso, con eccezione del personale sanitario certificato.
+                    </p>
+
+                    <strong><li>Responsabilità</li></strong>
+                    <p>
+                        Tutto il personale coinvolto nelle operazioni di contenzione è tenuto a rispettare scrupolosamente i comportamenti indicati nella presente procedura.
+                    </p>
+
+                    <strong><li>Modalità esecutive</li></strong>
+                    <p>
+                        L’ordine di evacuazione dei locali viene dato dal Coordinatore dell’emergenza mediante il suono del Beeper di attivazione attraverso il terminale proposto. Le operazioni di evacuazione sono gestite dagli addetti all’emergenza che provvedono a:
+                    <p>
+                        <ul>
+                            <li>
+                                Mantenere a debita distanza gli occupanti dell’edificio dal personale sanitario certificato, segnalando le vie di esodo e i percorsi per allontanarsi in modo ordinato e sicuro;
+                            </li>
+
+                            <li>
+                                Dopo l'evacuazione del personale sanitario certificato, gli addetti dovranno recarsi nel punto di raccolta A.R.M.A._2 indicato sulla mappa allegata. Qui si renderà necessario fare un appello.
+                            </li>
+                            <li>
+                                Gli addetti troveranno nel punto definito dalla mappa le istruzioni per il recupero delle armi di contenzione e difesa. Se la situazione lo richiede, gli addetti hanno l’autorizzazione al fuoco.
+                            </li>
+                        </ul>
+
+                        </p>
+                    <p>
+                        <p>
+                            Il personale dovrà inoltre cercare se possibile di:
+
+                        </p>
+                    
+
+                            <ul>
+                                <li>
+                                    Mettere in sicurezza le eventuali apparecchiature o gli impianti presenti nell’ area di lavoro, evitate che i soggetti sfruttino le apparecchiature presenti per ricavare strumenti di opposizione.
+                                </li>
+
+                                <li>
+                                    Usare la forza non letale, fino ad eventuali altre direttive
+                                </li>
+                            </ul>
+                    </p>
+                    </p>
+                    </ol>
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/plugins/iCheck")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$('.fc-month-button').removeClass('fc-state-active')
+            //$('.fc-agendaDay-button').addClass('fc-state-active');
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+            /* initialize the external events
+             -----------------------------------------------------------------*/
+        });
+    </script>
+}

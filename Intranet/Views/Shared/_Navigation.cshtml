@@ -32,6 +32,9 @@
             <li class="@Html.IsSelected(controller: "Farmaci")">
                 <a href="@Url.Action("Index", "Farmaci")"><i class="fa fa-medkit"></i> <span class="nav-label" data-i18n="nav.layouts">Farmaci</span></a>
             </li>
+            <li class="@Html.IsSelected(controller: "InventarioFarmaci")">
+                <a href="@Url.Action("Index", "InventarioFarmaci")"><i class="fa fa-medkit"></i> <span class="nav-label" data-i18n="nav.layouts">Inventario Farmaci</span></a>
+            </li>
             <li class="@Html.IsSelected(controller: "Turni")">
                 <a href="@Url.Action("Index", "Turni")"><i class="fa fa-calendar"></i> <span class="nav-label" data-i18n="nav.layouts">Turni Personale</span></a>
             </li>

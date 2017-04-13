@@ -189,6 +189,7 @@
     <Compile Include="Controllers\BeeperController.cs" />
     <Compile Include="Controllers\CartelleClinicheController.cs" />
     <Compile Include="Controllers\CentralinaController.cs" />
+    <Compile Include="Controllers\InventarioFarmaciController.cs" />
     <Compile Include="Controllers\PersonaleController.cs" />
     <Compile Include="Controllers\ProceduraEmergenzaController.cs" />
     <Compile Include="Controllers\ProgettoController.cs" />
@@ -291,6 +292,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ScopoProgettoViewModels.cs" />
+    <Compile Include="Models\Tabelle\InventarioFarmaci.cs" />
     <Compile Include="Models\Tabelle\Personale.cs" />
     <Compile Include="Models\Tabelle\CartelleCliniche.cs" />
     <Compile Include="Models\Tabelle\Progetto.cs" />
@@ -1981,6 +1983,7 @@
     <Content Include="Views\ProceduraEmergenza\Proc_3.cshtml" />
     <Content Include="Views\ProceduraEmergenza\Proc_4.cshtml" />
     <Content Include="Views\ProceduraEmergenza\Proc_5.cshtml" />
+    <Content Include="Views\InventarioFarmaci\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
